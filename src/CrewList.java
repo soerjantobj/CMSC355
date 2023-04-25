@@ -9,8 +9,6 @@ public class CrewList {
 
         String cmd = "java Textbroker.java " + file + skill + service;
         runService(cmd);
-
-
     }
 
     public static void runService(String cmd) throws IOException, InterruptedException {
