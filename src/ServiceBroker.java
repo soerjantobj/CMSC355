@@ -96,5 +96,6 @@ public class ServiceBroker{
         }
         //close stream
         brIN.close();
+        brERR.close();
     }
 }

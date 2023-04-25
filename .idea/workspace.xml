@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4339ff20-b69e-429e-900f-72bdf9372fb0" name="Changes" comment="Translator">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMSC355.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/msgEng.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/msgGer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMSC355.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CMSC355.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrewList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrewList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NumConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServiceBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBroker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextBroker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/french.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,22 +40,41 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/thene/IdeaProjects/CMSC355/src",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "vcs.Git"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thene\IdeaProjects\CMSC355\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\thene\IdeaProjects\CMSC355\src" />
       <recent name="C:\Users\thene\IdeaProjects\CMSC355" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.CrewList">
+    <configuration name="CrewList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CrewList" />
+      <module name="CMSC355" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Translator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Translator" />
       <module name="CMSC355" />
@@ -65,8 +82,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CMSC355" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CrewList" />
+        <item itemvalue="JUnit.JUnitTest" />
         <item itemvalue="Application.Translator" />
       </list>
     </recent_temporary>
@@ -87,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682184670296</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Translator">
+      <created>1682390370931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390370931</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Translator">
+      <created>1682390450349</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682390450349</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

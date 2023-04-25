@@ -55,5 +55,6 @@ public class Error {
         }
         //close stream
         brIN.close();
+        brERR.close();
     }
 }

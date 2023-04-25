@@ -20,29 +20,8 @@ public class Translator{
         String service = " Translate";
 
         String cmd = "java TextBroker.java " + file + word + service;
-        runService(cmd);
 
-//        boolean flag = false;
-//
-//        try {
-//            Scanner scan = new Scanner(new File(language + ".txt"));
-//
-//            while (scan.hasNextLine()) {
-//                String[] line = scan.nextLine().split(",");
-//                if (word.compareTo(line[1]) == 0) {
-//                    System.out.println(line[1]);
-//                    break;
-//                }
-//            }
-//            if (!flag) {
-//                //run no word found error
-//                ServiceBroker.runService("java -jar Error.jar 813");
-//            }
-//        }
-//        catch(FileNotFoundException e){
-//            //run language not found error
-//            ServiceBroker.runService("java -jar Error.jar 805");
-//        }
+        runService(cmd);
 
     }
     public static void runService(String cmd) throws IOException, InterruptedException {
@@ -76,5 +55,6 @@ public class Translator{
         }
         //close stream
         brIN.close();
+        brERR.close();
     }
 }
