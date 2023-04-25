@@ -1,45 +1,80 @@
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 
-public class Translator {
-    public static Scanner openFile(String fileName) throws FileNotFoundException {
-        File file = new File(fileName);
-        return new Scanner(file);
+/*********************
+ * Module Name: Translator
+ * Description: Service to translate an English word
+ * *******************
+ * input: language, word
+ * output: translated word
+ * *******************
+ * @author Bryan Soerjanto
+ * @version 4/24/2023 CMSC355
+ *********************/
+public class Translator{
+    public static void main(String[] args) throws IOException, InterruptedException{
+        String language = args[0];
+        String word = args[1];
+
+        String file = language + ".txt ";
+        String service = " Translate";
+
+        String cmd = "java TextBroker.java " + file + word + service;
+        runService(cmd);
+
+//        boolean flag = false;
+//
+//        try {
+//            Scanner scan = new Scanner(new File(language + ".txt"));
+//
+//            while (scan.hasNextLine()) {
+//                String[] line = scan.nextLine().split(",");
+//                if (word.compareTo(line[1]) == 0) {
+//                    System.out.println(line[1]);
+//                    break;
+//                }
+//            }
+//            if (!flag) {
+//                //run no word found error
+//                ServiceBroker.runService("java -jar Error.jar 813");
+//            }
+//        }
+//        catch(FileNotFoundException e){
+//            //run language not found error
+//            ServiceBroker.runService("java -jar Error.jar 805");
+//        }
+
     }
+    public static void runService(String cmd) throws IOException, InterruptedException {
+        /*********************************
+         * Variables:
+         * run - process to run command
+         * input - service output stream
+         * error - service error stream
+         * inRead - service output reader
+         * errRead - error reader
+         * brIN - line read from service
+         * brERR - error line read
+         * line - output line
+         *********************************/
+        Process run = Runtime.getRuntime().exec(cmd);
+        run.waitFor();
 
-    public static void main(String[] args) {
+        InputStreamReader inRead = new InputStreamReader(run.getInputStream());
+        InputStreamReader errRead = new InputStreamReader(run.getErrorStream());
 
-        //Create scanner to take in user input for word
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter a word to be translated");
-        String word = in.nextLine();
+        BufferedReader brIN = new BufferedReader(inRead);
+        BufferedReader brERR = new BufferedReader(errRead);
 
-        try {
-            //Create File object from given file
-            String pathName = "src/french.txt"; //args[0]
-            Scanner scan = openFile(pathName);
-            String translated = "";
-            //Scan through file until
-            while(scan.hasNextLine()){
-                //text file format: [word],[translated]
-                String line = scan.nextLine();
-                String[] arr = line.split(",");
-                if(word.compareTo(arr[0]) == 0){
-                    translated = arr[1];
-                    break;
-                }
-            }
-            if(translated.compareTo("") > 0){
-                System.out.println("The translated word is " + translated);
-            }
-            else{
-                System.out.println("There is no translation for the word " + word);
-            }
+        String line;
+        while((line = brIN.readLine()) != null){
+            System.out.println(line);
         }
-        //If file not found, throw exception
-        catch(FileNotFoundException e) {
-            System.out.println("File not found");
+
+        while((line = brERR.readLine()) != null){
+            System.out.println(line);
         }
+        //close stream
+        brIN.close();
     }
 }
