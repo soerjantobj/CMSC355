@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4339ff20-b69e-429e-900f-72bdf9372fb0" name="Changes" comment="Translator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMSC355.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CMSC355.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrewList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrewList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NumConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServiceBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBroker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextBroker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/service.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +123,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682390450349</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Translator">
+      <created>1682459102862</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682459102862</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Translator">
+      <created>1682459132054</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682459132054</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Translator">
+      <created>1682459374841</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682459374841</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
