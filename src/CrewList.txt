@@ -1,0 +1,8 @@
+John Doe,Captain,Navigation
+Jane Smith,Engineer,Repair
+Tom Brown,Captain,Cooking
+Sarah Lee,Navigator,Cleaning
+Bob Johnson,Cook,Navigation
+Alex Kim,Engineer,Cleaning
+Emily White,Navigator,Repair
+Jack Lee,Captain,Repair
