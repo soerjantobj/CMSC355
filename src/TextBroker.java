@@ -47,37 +47,39 @@ public class TextBroker {
             }
             else{
                 //service not found
+                flag = true;
                 error = " 703";
                 String cmd = "java Error.java " + language + error;
                 runService("");
             }
         }
+        if(!flag){
+            //key not found
+            switch (service) {
+                case "Translate": error = " 901"; break;
+                case "NumConverter": error = " 902"; break;
+                case "CrewList": error = " 903"; break;
+                case "Error": error = " 506"; break;
+                default: error = " 404"; break;
+            }
+            String cmd = "java Error.java " + language + error;
+            runService(cmd);
+        }
     }
     catch(FileNotFoundException e){
         //file not found
-        error = switch (service) {
-            case "Translate" -> " 805";
-            case "NumConverter" -> " 806";
-            case "CrewList" -> " 807";
-            case "Error" -> " 505";
-            default -> " 404";
+        switch (service) {
+            case "Translate": error = " 805"; break;
+            case "NumConverter": error = " 806"; break;
+            case "CrewList": error = " 807"; break;
+            case "Error": error = " 505"; break;
+            default: error = " 404"; break;
         };
         String cmd = "java Error.java " + language + error;
         runService(cmd);
     }
 
-        if(!flag){
-            //key not found
-            error = switch (service) {
-                case "Translate" -> " 901";
-                case "NumConverter" -> " 902";
-                case "CrewList" -> " 903";
-                case "Error" -> " ";
-                default -> " 404";
-            };
-            String cmd = "java Error.java " + language + error;
-            runService(cmd);
-        }
+
     }
     public static void runService(String cmd) throws IOException, InterruptedException {
         /*********************************

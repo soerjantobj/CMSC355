@@ -1,5 +1,6 @@
 404,"Not Found"
 505,"Error Not Found"
+506,"Error Message Not Found"
 703,"Service Not Found"
 805,"Language Not Found"
 806,"Convert Table Not Found"
@@ -7,4 +8,3 @@
 901,"Word Not Found"
 902,"Value Not Found"
 903,"Skill Not Found"
-905,""

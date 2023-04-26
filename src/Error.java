@@ -8,10 +8,10 @@ public class Error {
     public static void main(String[] args) throws IOException, InterruptedException {
         String language = args[0];
         String code = args[1];
-
         String file = "msg" + language + ".txt ";
+        String service = " Error";
 
-        String cmd = "java TextBroker.java " + file + code;
+        String cmd = "java TextBroker.java " + file + code + service;
         runService(cmd);
         }
     public static void runService(String cmd) throws IOException, InterruptedException {
