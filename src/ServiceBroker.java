@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Module Name: ServiceBroker
  * Description: Make calls to other services
  * *******************
- * Input: language, service code, service arguments
+ * Input: service code, service arguments
  * Output: void
  * *********************
  * @author Bryan Soerjanto
@@ -19,9 +19,10 @@ public class ServiceBroker{
          * isService - flag for if service exists
          * service - service code for service
          ******************/
-        String language = args[0];
-        String code = args[1];
-        boolean isService = false;
+        String service = args[0];
+        String language = "Eng";
+        boolean flag = false;
+
         Scanner scan = new Scanner(new File("service.txt"));
 
         /**
@@ -35,25 +36,25 @@ public class ServiceBroker{
         while(scan.hasNextLine()){
             String[] services = scan.nextLine().split(",");
             //if valid service code, run service
-            if(code.compareTo(services[1]) == 0){
-                isService = true;
+            if(service.compareTo(services[0]) == 0){
+                flag = true;
+                String cmd = services[1];
 
-                //build command to run services
-                for(int i = 2; i < args.length; i++){
-                    services[1] += " " + args[i];
+                for(int i = 1; i < args.length; i++){
+                    cmd += " " + args[i];
                 }
 
-//                for (String serviceArgs : args) {
-//                    services[1] += " " + serviceArgs;
-//                }
-                String cmd = services[1];
                 runService(cmd);
                 break;
             }
         }
-        //service does not exist, send error
-        if(!isService){
-            String cmd = "java Error.java " + language + " 404";
+        if(!flag){
+            //service not found error
+            String file = "msg" + language + ".txt";
+            String errorService = "Error";
+            String code = " 703 ";
+
+            String cmd = "java TextBroker.java " + file + code + errorService;
             runService(cmd);
         }
     }

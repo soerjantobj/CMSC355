@@ -1,4 +1,4 @@
-Translator,"java Translator.java"
-NumConverter,"java NumConverter.java"
-Error,"java Error.java"
-CrewList,"java CrewList.java"
+Translator,java Translator.java
+NumConverter,java NumConverter.java
+Error,java Error.java
+CrewList,java CrewList.java
