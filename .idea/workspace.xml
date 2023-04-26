@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4339ff20-b69e-429e-900f-72bdf9372fb0" name="Changes" comment="Translator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/service.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrewList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrewList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextBroker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/msgEng.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/msgEng.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,43 +35,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/thene/IdeaProjects/CMSC355/src",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
-  },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
-    ]
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\thene\IdeaProjects\CMSC355\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\thene\IdeaProjects\CMSC355\src" />
       <recent name="C:\Users\thene\IdeaProjects\CMSC355" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CrewList">
-    <configuration name="CrewList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CrewList" />
-      <module name="CMSC355" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Translator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Translator" />
       <module name="CMSC355" />
@@ -76,19 +54,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CMSC355" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CrewList" />
-        <item itemvalue="JUnit.JUnitTest" />
         <item itemvalue="Application.Translator" />
       </list>
     </recent_temporary>
@@ -109,42 +76,7 @@
       <option name="project" value="LOCAL" />
       <updated>1682184670296</updated>
     </task>
-    <task id="LOCAL-00002" summary="Translator">
-      <created>1682390370931</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1682390370931</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Translator">
-      <created>1682390450349</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1682390450349</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Translator">
-      <created>1682459102862</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1682459102862</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Translator">
-      <created>1682459132054</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1682459132054</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Translator">
-      <created>1682459374841</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1682459374841</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +89,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Translator" />

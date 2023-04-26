@@ -17,13 +17,20 @@ public class TextBroker {
         String file = args[0];
         String key = args[1];
         String service = args[2];
+
+        String language = "Eng";
+        String error;
+
         boolean flag = false;
     try {
         Scanner scan = new Scanner(new File(file));
 
         while (scan.hasNextLine()) {
             String[] line = scan.nextLine().split(",");
-            if (service.compareTo("Translate") == 0 || service.compareTo("NumConverter") == 0) {
+            if (service.compareTo("Translate") == 0 ||
+                service.compareTo("NumConverter") == 0 ||
+                service.compareTo("Error") == 0){
+
                 if (line[0].compareTo(key) == 0) {
                     flag = true;
                     System.out.println(line[1]);
@@ -36,20 +43,39 @@ public class TextBroker {
                         flag = true;
                         System.out.println(line[0]);
                     }
+                break;
             }
             else{
-                //Service not found
-                String cmd = "java Error.java Eng 703";
+                //service not found
+                error = " 703";
+                String cmd = "java Error.java " + language + error;
+                runService("");
             }
         }
     }
     catch(FileNotFoundException e){
-        String cmd = "java Error.java 404";
+        //file not found
+        error = switch (service) {
+            case "Translate" -> " 805";
+            case "NumConverter" -> " 806";
+            case "CrewList" -> " 807";
+            case "Error" -> " 505";
+            default -> " 404";
+        };
+        String cmd = "java Error.java " + language + error;
         runService(cmd);
     }
 
         if(!flag){
-            String cmd = "java Error.java 404";
+            //key not found
+            error = switch (service) {
+                case "Translate" -> " 901";
+                case "NumConverter" -> " 902";
+                case "CrewList" -> " 903";
+                case "Error" -> " ";
+                default -> " 404";
+            };
+            String cmd = "java Error.java " + language + error;
             runService(cmd);
         }
     }

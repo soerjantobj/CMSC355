@@ -7,7 +7,7 @@ public class CrewList {
         String service = " CrewList";
         String file = "CrewList.txt ";
 
-        String cmd = "java Textbroker.java " + file + skill + service;
+        String cmd = "java TextBroker.java " + file + skill + service;
         runService(cmd);
     }
 
