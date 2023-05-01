@@ -1,16 +1,23 @@
-import java.io.*;
-
-/*********************
+/*******************************************************
  * Module Name: Translator
- * Description: Service to translate an English word
- * *******************
+ * Description: Services translates English word to another language
+ * *****************************************************
  * input: language, word
  * output: translated word
- * *******************
+ * *****************************************************
  * @author Bryan Soerjanto
- * @version 4/24/2023 CMSC355
- *********************/
+ * @version 5/1/2023 CMSC355
+ *******************************************************/
+import java.io.*;
+
+/********************************************
+ * Class name: Translator
+ * Description: translates english word to another language
+ * Input: language, word
+ * Output: translated word
+ * ******************************************/
 public class Translator{
+
     public static void main(String[] args) throws IOException, InterruptedException{
         String language = args[0];
         String word = args[1];

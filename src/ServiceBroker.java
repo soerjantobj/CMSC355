@@ -1,38 +1,59 @@
+/*******************************************************
+ * Module Name: ServiceBroker
+ * Description: Service calls other services
+ * *****************************************************
+ * input: service code
+ * output: output of called service
+ * *****************************************************
+ * @author Bryan Soerjanto
+ * @version 5/1/2023 CMSC355
+ *******************************************************/
 import java.io.*;
 import java.util.Scanner;
 
-/*********************
- * Module Name: ServiceBroker
- * Description: Make calls to other services
- * *******************
- * Input: service code, service arguments
- * Output: void
- * *********************
- * @author Bryan Soerjanto
- * @version 4/23/2023 CMSC355
- *********************/
+/********************************************
+ * Class name: ServiceBroker
+ * Description: Service calls other services
+ * Input: service code
+ * Output: output of service
+ * ******************************************/
 public class ServiceBroker{
+    /**************************************************************************************************
+     * Variables:
+     * service: service code to determine which service to call
+     * language: language to output errors in
+     * flag: checks if service exists
+     * scan: Scanner object to read lines in service file
+     * cmd: java command to run
+     **************************************************************************************************
+     * Pseudocode:
+     * 1. Create scanner object to read service.txt file
+     * 2. WHILE(file has next line):
+     *      i. read line in file
+     *      IF(first part of line = service):
+     *          a. set flag to true
+     *          b. set command to second part of line, which is the java command to call a service
+     *          c. concatenate arguments to java command
+     *          d. run java command with arguments
+     *          e. BREAK WHILE
+     *      END IF
+     *    END WHILE
+     * 4. IF(flag is false)
+     *      i. create erorr file name
+     *          FORMAT: msg[language].txt
+     *      ii. set service code
+     *      iii. set error code
+     *      iv. create java command to call TextBroker to output error message
+     *      v. call runProcess to run java program
+     *     END IF
+     **************************************************************************************************/
     public static void main(String[] args) throws IOException, InterruptedException {
-        /*****************
-         * Variables:
-         * scan - Scanner object to read service text file
-         * isService - flag for if service exists
-         * service - service code for service
-         ******************/
         String service = args[0];
         String language = "Eng";
         boolean flag = false;
 
         Scanner scan = new Scanner(new File("service.txt"));
 
-        /**
-         * Scanner reads file line by line
-         * first instance is service code
-         * check if service code matches
-         *  if match, set isService to true
-         *  create command to run service
-         *  call runService method to execute command
-         */
         while(scan.hasNextLine()){
             String[] services = scan.nextLine().split(",");
             //if valid service code, run service
@@ -58,14 +79,7 @@ public class ServiceBroker{
             runService(cmd);
         }
     }
-    /*********************
-     * Module Name: ServiceBroker
-     * Component: Orchestration Module
-     * Description:
-     * *******************
-     * Input: command to call service
-     * Output: void
-     *********************/public static void runService(String cmd) throws IOException, InterruptedException {
+    public static void runService(String cmd) throws IOException, InterruptedException {
         /*********************************
          * Variables:
          * run - process to run command

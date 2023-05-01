@@ -26,18 +26,45 @@ public class TextBroker {
      * service: name of called service
      * language: spoken language to output error message
      * error: error code
-     * flag: checks if service exists
+     * flag: checks if key exists in file
      * scan: Scanner object to read file
      * line: current line read
      * cmd: java command to call Error service
-     * **********************************************************
-     * Pseudocode:
-     * 1. Create scanner to read file for service code
-     *  i. if file does not exist, call service not found error
-     *  ii. if file exists, check which service
-     *
-     ***********************************************************/
+     * **********************************************************/
+
     public static void main(String[] args) throws IOException, InterruptedException {
+        /***********************************************************
+         * Pseudocode:
+         * 1. Create scanner to read file for service code
+         * 2. if file not found, call Error service with file not found error code
+         * 3. otherwise, read service file corresponding to callee service until end of file
+         * WHILE(file has next line):
+         *  i. read next line in file
+         *  ii. IF(service is Translate, NumConverter, or Error):
+         *      a. IF(first part of line = key):
+         *              A. set flag to true
+         *              B. print second part of line
+         *              C. BREAK WHILE
+         *          END IF
+         *      END IF
+         *  iii. ELSE IF(service is Crew List):
+         *      a. FOR(number of members):
+         *          IF(first part of line = key):
+         *              A. set flag to true
+         *              B. print second part of line
+         *              C. BREAK WHILE
+         *          END IF
+         *      END ELSE IF
+         *  iv. ELSE:
+         *          a. set flag to true
+         *          b. call error with service not found error code
+         *      END ELSE
+         *  END WHILE
+         * 4. IF(flag is false):
+         *      i. set error to corresponding key not found error code
+         *      ii. call runService to call Error service with error code
+         *    END IF
+         ***********************************************************/
         String file = args[0];
         String key = args[1];
         String service = args[2];
