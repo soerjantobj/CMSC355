@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4339ff20-b69e-429e-900f-72bdf9372fb0" name="Changes" comment="Documentation and pseudocode">
+      <change beforePath="$PROJECT_DIR$/src/CrewList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrewList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NumConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServiceBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceBroker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TextBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextBroker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator.java" afterDir="false" />
@@ -152,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682964336545</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Documentation and pseudocode">
+      <created>1682967192841</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682967192841</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

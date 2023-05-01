@@ -27,7 +27,7 @@ public class CrewList {
          *  text format: [name],[skill1] [skill 2] [skill ...]
          * cmd: java command
          * ******************************************************************
-         * Pseudocode:
+         * Algorithm/Pseudocode:
          * 1. List arguments in a string:
          *  i. "[file] [skill] [service]"
          * 2. Create java command to call TextBroker with list of arguments

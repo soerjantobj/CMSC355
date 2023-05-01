@@ -26,7 +26,7 @@ public class ServiceBroker{
      * scan: Scanner object to read lines in service file
      * cmd: java command to run
      **************************************************************************************************
-     * Pseudocode:
+     * Algorithm/Pseudocode:
      * 1. Create scanner object to read service.txt file
      * 2. WHILE(file has next line):
      *      i. read line in file

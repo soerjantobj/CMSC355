@@ -27,7 +27,7 @@ public class Error {
      * service: name of service
      * cmd: java command
      * ***************************************************************
-     * Pseudocode:
+     * Algorithm/Pseudocode:
      * 1. Create list of args as a string
      *  i. "[file] [code] [service]"
      * 2. Create java command to call TextBroker with list of args

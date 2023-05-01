@@ -26,7 +26,7 @@ public class NumConverter {
      * file: name of file
      * cmd: java command
      * **********************************************************
-     * Pseudocode:
+     * Algorithm/Pseudocode:
      * 1. Construct file name
      *  i. "[base]To[newBase].txt"
      * 2. Create list of args as a string

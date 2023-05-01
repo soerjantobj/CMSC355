@@ -34,7 +34,7 @@ public class TextBroker {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         /***********************************************************
-         * Pseudocode:
+         * Algorithm/Pseudocode:
          * 1. Create scanner to read file for service code
          * 2. if file not found, call Error service with file not found error code
          * 3. otherwise, read service file corresponding to callee service until end of file

@@ -18,6 +18,23 @@ import java.io.*;
  * ******************************************/
 public class Translator{
 
+    /********************************************************
+     * Variables:
+     * language: language to be translated into
+     * word: word to be translated
+     * file: name of file
+     * service: name of service
+     * cmd: java command to call TextBroker service
+     ********************************************************
+     * Algorithm/Pseudocode:
+     * 1. Construct file name
+     *  i. "[language].txt"
+     * 2. Create list of args as a string
+     *  i. "[file] [word] [service]"
+     * 3. Create java command to call TextBroker
+     *  i. "java TextBroker.java " + "[file] [word] [service]"
+     * 4. call runService to run full command
+     ********************************************************/
     public static void main(String[] args) throws IOException, InterruptedException{
         String language = args[0];
         String word = args[1];
