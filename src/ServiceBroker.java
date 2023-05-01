@@ -65,27 +65,26 @@ public class ServiceBroker{
      * *******************
      * Input: command to call service
      * Output: void
-     *********************/
-    public static void runService(String cmd) throws IOException, InterruptedException {
+     *********************/public static void runService(String cmd) throws IOException, InterruptedException {
         /*********************************
          * Variables:
          * run - process to run command
-         * input - service output stream
-         * error - service error stream
-         * inRead - service output reader
-         * errRead - error reader
          * brIN - line read from service
          * brERR - error line read
          * line - output line
+         * ******************************************
+         * Pseudocode:
+         * 1. Create process to run a java command
+         * 2. thread waits until process is terminated
+         * 3. Create BufferReader to read outputs from new InputStreamReader
+         * 4. print all outputs from process
+         * 5. close streams
          *********************************/
         Process run = Runtime.getRuntime().exec(cmd);
         run.waitFor();
 
-        InputStreamReader inRead = new InputStreamReader(run.getInputStream());
-        InputStreamReader errRead = new InputStreamReader(run.getErrorStream());
-
-        BufferedReader brIN = new BufferedReader(inRead);
-        BufferedReader brERR = new BufferedReader(errRead);
+        BufferedReader brIN = new BufferedReader(new InputStreamReader(run.getInputStream()));
+        BufferedReader brERR = new BufferedReader(new InputStreamReader(run.getErrorStream()));
 
         String line;
         while((line = brIN.readLine()) != null){

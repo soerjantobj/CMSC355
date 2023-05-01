@@ -1,18 +1,42 @@
+/*******************************************************
+ * Module Name: TextBroker
+ * Description: Services rely on TextBroker for outputs
+ * *****************************************************
+ * input: file, key, service, error
+ * output: result from key or error message
+ * *****************************************************
+ * @author Bryan Soerjanto
+ * @version 5/1/2023 CMSC355
+ *******************************************************/
 import java.io.*;
 import java.util.Scanner;
 
-/*****************
- * TextBroker Module
- * ***************
- * Description: look up word in text file and gives corresponding output
- * ***************
- * Input: text file name, key, service
- * Output: output from text file or error
- * ***************
- * @author Bryan Soerjanto
- * @version 4/24/2023 CMSC355
- *****************/
+/********************************************
+ * Class name: TextBroker
+ * Description: Service reads a given file
+ *  and outputs the result the key maps to
+ * Input: base, newBase, value
+ * Output: converted value
+ * ******************************************/
 public class TextBroker {
+    /************************************************************
+     * Variables:
+     * file: name of file from service that called TextBroker
+     * key: determines which result to output for service callee
+     * service: name of called service
+     * language: spoken language to output error message
+     * error: error code
+     * flag: checks if service exists
+     * scan: Scanner object to read file
+     * line: current line read
+     * cmd: java command to call Error service
+     * **********************************************************
+     * Pseudocode:
+     * 1. Create scanner to read file for service code
+     *  i. if file does not exist, call service not found error
+     *  ii. if file exists, check which service
+     *
+     ***********************************************************/
     public static void main(String[] args) throws IOException, InterruptedException {
         String file = args[0];
         String key = args[1];
@@ -50,7 +74,7 @@ public class TextBroker {
                 flag = true;
                 error = " 703";
                 String cmd = "java Error.java " + language + error;
-                runService("");
+                runService(cmd);
             }
         }
         if(!flag){
@@ -85,22 +109,22 @@ public class TextBroker {
         /*********************************
          * Variables:
          * run - process to run command
-         * input - service output stream
-         * error - service error stream
-         * inRead - service output reader
-         * errRead - error reader
          * brIN - line read from service
          * brERR - error line read
          * line - output line
+         * ******************************************
+         * Pseudocode:
+         * 1. Create process to run a java command
+         * 2. thread waits until process is terminated
+         * 3. Create BufferReader to read outputs from new InputStreamReader
+         * 4. print all outputs from process
+         * 5. close streams
          *********************************/
         Process run = Runtime.getRuntime().exec(cmd);
         run.waitFor();
 
-        InputStreamReader inRead = new InputStreamReader(run.getInputStream());
-        InputStreamReader errRead = new InputStreamReader(run.getErrorStream());
-
-        BufferedReader brIN = new BufferedReader(inRead);
-        BufferedReader brERR = new BufferedReader(errRead);
+        BufferedReader brIN = new BufferedReader(new InputStreamReader(run.getInputStream()));
+        BufferedReader brERR = new BufferedReader(new InputStreamReader(run.getErrorStream()));
 
         String line;
         while((line = brIN.readLine()) != null){
